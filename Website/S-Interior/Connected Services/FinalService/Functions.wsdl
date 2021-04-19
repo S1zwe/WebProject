@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Functions" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57307/Functions.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57307/Functions.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57307/Functions.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FinalService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFunctions_checkUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkUser" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_checkUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserID" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_loginUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:loginUser" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_loginUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addNewFurninture_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewFurninture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addNewFurninture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewFurnintureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addNewInterior_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewInterior" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addNewInterior_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewInteriorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getInterior_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInterior" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getInterior_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInteriorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_liestDesigns_InputMessage">
+    <wsdl:part name="parameters" element="tns:liestDesigns" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_liestDesigns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:liestDesignsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getAboutInterior_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAboutInterior" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getAboutInterior_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAboutInteriorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listFuniture_InputMessage">
+    <wsdl:part name="parameters" element="tns:listFuniture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listFuniture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listFunitureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addToCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addToCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:listCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listCartFuniture_InputMessage">
+    <wsdl:part name="parameters" element="tns:listCartFuniture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listCartFuniture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listCartFunitureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:listUser" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAll" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchTempCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTempCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchTempCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchTempCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:editCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editRegOder_InputMessage">
+    <wsdl:part name="parameters" element="tns:editRegOder" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editRegOder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editRegOderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editTempCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:editTempCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editTempCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editTempCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:editDelete" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editTempDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:editTempDelete" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editTempDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editTempDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteCartFurniture_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCartFurniture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteCartFurniture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCartFurnitureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteTempCartFurniture_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTempCartFurniture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteTempCartFurniture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteTempCartFurnitureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteFurniture_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFurniture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_deleteFurniture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFurnitureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getAboutFurniture_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAboutFurniture" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getAboutFurniture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAboutFurnitureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:editQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editUserMoney_InputMessage">
+    <wsdl:part name="parameters" element="tns:editUserMoney" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editUserMoney_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editUserMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_DeleteInterior_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInterior" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_DeleteInterior_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInteriorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editUserPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:editUserPoint" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editUserPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editUserPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editTempQuantity_InputMessage">
+    <wsdl:part name="parameters" element="tns:editTempQuantity" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_editTempQuantity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editTempQuantityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_userRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:userRegister" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_userRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:userRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_userTempRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:userTempRegister" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_userTempRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:userTempRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_DeleleUserPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleleUserPoint" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_DeleleUserPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleleUserPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPoints" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addOder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addOder" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addOder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addOderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addTempcart_InputMessage">
+    <wsdl:part name="parameters" element="tns:addTempcart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addTempcart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addTempcartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listDesigns_InputMessage">
+    <wsdl:part name="parameters" element="tns:listDesigns" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listDesigns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listDesignsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listTempCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:listTempCart" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listTempCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listTempCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addSessionUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:addSessionUser" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addSessionUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addSessionUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addTempOder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addTempOder" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addTempOder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addTempOderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_GenerateReference_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReference" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_GenerateReference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listRegisteredUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:listRegisteredUsers" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listRegisteredUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listRegisteredUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listRegisteredTempUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:listRegisteredTempUsers" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listRegisteredTempUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listRegisteredTempUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getAbautUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAbautUsers" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getAbautUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAbautUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getRecCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRecCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_getRecCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRecCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUser" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchOders_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOders" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_SearchOders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchOdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllOders_InputMessage">
+    <wsdl:part name="parameters" element="tns:listAllOders" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllOders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listAllOdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllTempOders_InputMessage">
+    <wsdl:part name="parameters" element="tns:listAllTempOders" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllTempOders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listAllTempOdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:listAllInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listAllInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listIvoiceItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:listIvoiceItems" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listIvoiceItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listIvoiceItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllFunitures_InputMessage">
+    <wsdl:part name="parameters" element="tns:listAllFunitures" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_listAllFunitures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listAllFunituresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addnewInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:addnewInvoice" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addnewInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addnewInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addnewInvoiceItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:addnewInvoiceItems" />
+  </wsdl:message>
+  <wsdl:message name="IFunctions_addnewInvoiceItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addnewInvoiceItemsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFunctions">
+    <wsdl:operation name="checkUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/checkUser" message="tns:IFunctions_checkUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/checkUserResponse" message="tns:IFunctions_checkUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getUserID" message="tns:IFunctions_getUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getUserIDResponse" message="tns:IFunctions_getUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/loginUser" message="tns:IFunctions_loginUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/loginUserResponse" message="tns:IFunctions_loginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewFurninture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addNewFurninture" message="tns:IFunctions_addNewFurninture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addNewFurnintureResponse" message="tns:IFunctions_addNewFurninture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewInterior">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addNewInterior" message="tns:IFunctions_addNewInterior_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addNewInteriorResponse" message="tns:IFunctions_addNewInterior_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterior">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getInterior" message="tns:IFunctions_getInterior_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getInteriorResponse" message="tns:IFunctions_getInterior_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getCustomer" message="tns:IFunctions_getCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getCustomerResponse" message="tns:IFunctions_getCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="liestDesigns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/liestDesigns" message="tns:IFunctions_liestDesigns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/liestDesignsResponse" message="tns:IFunctions_liestDesigns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAboutInterior">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getAboutInterior" message="tns:IFunctions_getAboutInterior_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getAboutInteriorResponse" message="tns:IFunctions_getAboutInterior_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listFuniture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listFuniture" message="tns:IFunctions_listFuniture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listFunitureResponse" message="tns:IFunctions_listFuniture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addToCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addToCart" message="tns:IFunctions_addToCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addToCartResponse" message="tns:IFunctions_addToCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listCart" message="tns:IFunctions_listCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listCartResponse" message="tns:IFunctions_listCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listCartFuniture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listCartFuniture" message="tns:IFunctions_listCartFuniture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listCartFunitureResponse" message="tns:IFunctions_listCartFuniture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listUser" message="tns:IFunctions_listUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listUserResponse" message="tns:IFunctions_listUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/deleteAll" message="tns:IFunctions_deleteAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/deleteAllResponse" message="tns:IFunctions_deleteAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/SearchCart" message="tns:IFunctions_SearchCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/SearchCartResponse" message="tns:IFunctions_SearchCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTempCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/SearchTempCart" message="tns:IFunctions_SearchTempCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/SearchTempCartResponse" message="tns:IFunctions_SearchTempCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editCart" message="tns:IFunctions_editCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editCartResponse" message="tns:IFunctions_editCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editRegOder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editRegOder" message="tns:IFunctions_editRegOder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editRegOderResponse" message="tns:IFunctions_editRegOder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editTempCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editTempCart" message="tns:IFunctions_editTempCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editTempCartResponse" message="tns:IFunctions_editTempCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editDelete" message="tns:IFunctions_editDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editDeleteResponse" message="tns:IFunctions_editDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editTempDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editTempDelete" message="tns:IFunctions_editTempDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editTempDeleteResponse" message="tns:IFunctions_editTempDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCartFurniture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/deleteCartFurniture" message="tns:IFunctions_deleteCartFurniture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/deleteCartFurnitureResponse" message="tns:IFunctions_deleteCartFurniture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteTempCartFurniture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/deleteTempCartFurniture" message="tns:IFunctions_deleteTempCartFurniture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/deleteTempCartFurnitureResponse" message="tns:IFunctions_deleteTempCartFurniture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFurniture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/deleteFurniture" message="tns:IFunctions_deleteFurniture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/deleteFurnitureResponse" message="tns:IFunctions_deleteFurniture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAboutFurniture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getAboutFurniture" message="tns:IFunctions_getAboutFurniture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getAboutFurnitureResponse" message="tns:IFunctions_getAboutFurniture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editQuantity" message="tns:IFunctions_editQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editQuantityResponse" message="tns:IFunctions_editQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editUserMoney">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editUserMoney" message="tns:IFunctions_editUserMoney_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editUserMoneyResponse" message="tns:IFunctions_editUserMoney_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInterior">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/DeleteInterior" message="tns:IFunctions_DeleteInterior_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/DeleteInteriorResponse" message="tns:IFunctions_DeleteInterior_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editUserPoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editUserPoint" message="tns:IFunctions_editUserPoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editUserPointResponse" message="tns:IFunctions_editUserPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editTempQuantity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/editTempQuantity" message="tns:IFunctions_editTempQuantity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/editTempQuantityResponse" message="tns:IFunctions_editTempQuantity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="userRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/userRegister" message="tns:IFunctions_userRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/userRegisterResponse" message="tns:IFunctions_userRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="userTempRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/userTempRegister" message="tns:IFunctions_userTempRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/userTempRegisterResponse" message="tns:IFunctions_userTempRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleleUserPoint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/DeleleUserPoint" message="tns:IFunctions_DeleleUserPoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/DeleleUserPointResponse" message="tns:IFunctions_DeleleUserPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getPoints" message="tns:IFunctions_getPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getPointsResponse" message="tns:IFunctions_getPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addOder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addOder" message="tns:IFunctions_addOder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addOderResponse" message="tns:IFunctions_addOder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addTempcart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addTempcart" message="tns:IFunctions_addTempcart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addTempcartResponse" message="tns:IFunctions_addTempcart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listDesigns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listDesigns" message="tns:IFunctions_listDesigns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listDesignsResponse" message="tns:IFunctions_listDesigns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listTempCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listTempCart" message="tns:IFunctions_listTempCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listTempCartResponse" message="tns:IFunctions_listTempCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addSessionUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addSessionUser" message="tns:IFunctions_addSessionUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addSessionUserResponse" message="tns:IFunctions_addSessionUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addTempOder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addTempOder" message="tns:IFunctions_addTempOder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addTempOderResponse" message="tns:IFunctions_addTempOder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/GenerateReference" message="tns:IFunctions_GenerateReference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/GenerateReferenceResponse" message="tns:IFunctions_GenerateReference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listRegisteredUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listRegisteredUsers" message="tns:IFunctions_listRegisteredUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listRegisteredUsersResponse" message="tns:IFunctions_listRegisteredUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listRegisteredTempUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listRegisteredTempUsers" message="tns:IFunctions_listRegisteredTempUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listRegisteredTempUsersResponse" message="tns:IFunctions_listRegisteredTempUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAbautUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getAbautUsers" message="tns:IFunctions_getAbautUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getAbautUsersResponse" message="tns:IFunctions_getAbautUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRecCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/getRecCustomers" message="tns:IFunctions_getRecCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/getRecCustomersResponse" message="tns:IFunctions_getRecCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/SearchUser" message="tns:IFunctions_SearchUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/SearchUserResponse" message="tns:IFunctions_SearchUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchOders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/SearchOders" message="tns:IFunctions_SearchOders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/SearchOdersResponse" message="tns:IFunctions_SearchOders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listAllOders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listAllOders" message="tns:IFunctions_listAllOders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listAllOdersResponse" message="tns:IFunctions_listAllOders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listAllTempOders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listAllTempOders" message="tns:IFunctions_listAllTempOders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listAllTempOdersResponse" message="tns:IFunctions_listAllTempOders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listAllInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listAllInvoice" message="tns:IFunctions_listAllInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listAllInvoiceResponse" message="tns:IFunctions_listAllInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listIvoiceItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listIvoiceItems" message="tns:IFunctions_listIvoiceItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listIvoiceItemsResponse" message="tns:IFunctions_listIvoiceItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listAllFunitures">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/listAllFunitures" message="tns:IFunctions_listAllFunitures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/listAllFunituresResponse" message="tns:IFunctions_listAllFunitures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addnewInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addnewInvoice" message="tns:IFunctions_addnewInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addnewInvoiceResponse" message="tns:IFunctions_addnewInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addnewInvoiceItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFunctions/addnewInvoiceItems" message="tns:IFunctions_addnewInvoiceItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFunctions/addnewInvoiceItemsResponse" message="tns:IFunctions_addnewInvoiceItems_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFunctions" type="tns:IFunctions">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkUser">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/checkUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserID">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginUser">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/loginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewFurninture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addNewFurninture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewInterior">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addNewInterior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterior">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getInterior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="liestDesigns">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/liestDesigns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAboutInterior">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getAboutInterior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listFuniture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listFuniture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addToCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listCartFuniture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listCartFuniture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listUser">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAll">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/deleteAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/SearchCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTempCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/SearchTempCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editRegOder">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editRegOder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editTempCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editTempCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDelete">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editTempDelete">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editTempDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCartFurniture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/deleteCartFurniture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteTempCartFurniture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/deleteTempCartFurniture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFurniture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/deleteFurniture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAboutFurniture">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getAboutFurniture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editQuantity">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editUserMoney">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editUserMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInterior">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/DeleteInterior" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editUserPoint">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editUserPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editTempQuantity">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/editTempQuantity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userRegister">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/userRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userTempRegister">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/userTempRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleleUserPoint">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/DeleleUserPoint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPoints">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addOder">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addOder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTempcart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addTempcart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listDesigns">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listDesigns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listTempCart">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listTempCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addSessionUser">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addSessionUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addTempOder">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addTempOder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReference">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/GenerateReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listRegisteredUsers">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listRegisteredUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listRegisteredTempUsers">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listRegisteredTempUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAbautUsers">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getAbautUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRecCustomers">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/getRecCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/SearchUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchOders">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/SearchOders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listAllOders">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listAllOders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listAllTempOders">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listAllTempOders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listAllInvoice">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listAllInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIvoiceItems">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listIvoiceItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listAllFunitures">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/listAllFunitures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addnewInvoice">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addnewInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addnewInvoiceItems">
+      <soap:operation soapAction="http://tempuri.org/IFunctions/addnewInvoiceItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Functions">
+    <wsdl:port name="BasicHttpBinding_IFunctions" binding="tns:BasicHttpBinding_IFunctions">
+      <soap:address location="http://localhost:57307/Functions.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
